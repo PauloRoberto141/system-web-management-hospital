@@ -4,19 +4,21 @@ import java.util.Set;
 import java.util.TreeSet;
 
 public class TabelaDePrecoItem {
-	
+
 	private String nomeTabelaDePrecoItem;
-	
-	private Set<Item> listaItens;
-	
-	public TabelaDePrecoItem(String nome, Set<Item> listaItens){
+
+	private Set<Preco> listaPrecos;
+	private Set<TabelaXItem> listaTabelaXItens;
+
+	public TabelaDePrecoItem(String nome, Set<Preco> listaPrecos) {
 		setNomeTabelaDePrecoItem(nome);
-		this.listaItens = new TreeSet<Item>();
-		for(Item i : listaItens)
-			this.adicionarItem(i);
+		this.listaPrecos = new TreeSet<Preco>();
+		for(Preco p : listaPrecos)
+			this.adicionarPreco(p);
+		this.listaTabelaXItens = new TreeSet<TabelaXItem>();
 	}
-	
-	//Getters e Setters
+
+	// Getters e Setters
 	public String getNomeTabelaDePrecoItem() {
 		return nomeTabelaDePrecoItem;
 	}
@@ -24,11 +26,27 @@ public class TabelaDePrecoItem {
 	public void setNomeTabelaDePrecoItem(String nomeTabelaPrecoItem) {
 		this.nomeTabelaDePrecoItem = nomeTabelaPrecoItem;
 	}
+
+	// Metodo adicionar e remover.
+	public void adicionarPreco(Preco novoPreco) {
+
+	}
+
+	public void removerPreco(Preco exPreco) {
+
+	}
 	
-	//
-	public void adicionarItem(Item item){
+	public void adicionarTabelaXItem(TabelaXItem novaTabelaXItem){
 		
 	}
 	
+	public void removerTabelaXItem(TabelaXItem exTabelaXItem){
+		
+	}
+
+	@Override
+	public String toString() {
+		return "TabelaDePrecoItem [nomeTabelaDePrecoItem=" + nomeTabelaDePrecoItem + ", listaItens=" + listaPrecos + "]";
+	}
 
 }

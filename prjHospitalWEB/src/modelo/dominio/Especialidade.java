@@ -27,6 +27,14 @@ public class Especialidade {
 	public void setCbo(String cbo) {
 		this.cbo = cbo;
 	}
+	
+	//Metodo adiconar e remover.
+	public void adicionarMedico(Medico novoMedico){
+		
+	}
+	public void removerMedico(Medico exMedico){
+		
+	}
 	@Override
 	public String toString() {
 		return "Especialidade [nomeEspecialidade=" + nomeEspecialidade + ", cbo=" + cbo + "]";

@@ -21,14 +21,14 @@ public class Pessoa {
 	public Pessoa(String nomePessoa, String logradouro, Integer numero, String bairro, String cidade, String uf,
 			String pais, String cep) {
 		super();
-		this.nomePessoa = nomePessoa;
-		this.logradouro = logradouro;
-		this.numero = numero;
-		this.bairro = bairro;
-		this.cidade = cidade;
-		this.uf = uf;
-		this.pais = pais;
-		this.cep = cep;
+		this.setNomePessoa(nomePessoa); 
+		this.setLogradouro(logradouro);
+		this.setNumero(numero);
+		this.setBairro(bairro);
+		this.setCidade(cidade);
+		this.setUf(uf);
+		this.setPais(pais);
+		this.setCep(cep);
 	}
 	
 	// Getters e Setters

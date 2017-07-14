@@ -44,6 +44,28 @@ public class Medico extends Pessoa {
 	public void setSexo(String sexo) {
 		this.sexo = sexo;
 	}
+	
+	//Metodos adicionar e remover.
+	public void adicionarEspecialidade(Especialidade novaEspecialidade){
+		
+	}
+	public void removerEspecialidade(Especialidade exEspecialidade){
+		
+	}
+	
+	public void adicionarAtendimento(Atendimento novoAtendimento){
+		
+	}
+	public void removerAtendimento(Atendimento exAtendimento){
+		
+	}
+	
+	public void adicionarInternacao(Internacao novaInternacao){
+		
+	}
+	public void removerInternacao(Internacao exInternacao){
+		
+	}
 	@Override
 	public String toString() {
 		return "Medico [crm=" + crm + ", nacionalidade=" + nacionalidade + ", sexo=" + sexo + "]";

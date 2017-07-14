@@ -13,9 +13,9 @@ public class Usuario {
 	private Set<Empresa> listaEmpresas;
 	
 	public Usuario(String nomeCompelto, String nomeUsuario, Password senha){
-		setNomeCompletoUsuario(nomeCompelto);
-		setNomeUsuario(nomeUsuario);
-		setSenha(senha);
+		this.setNomeCompletoUsuario(nomeCompelto);
+		this.setNomeUsuario(nomeUsuario);
+		this.setSenha(senha);
 		
 	}
 
@@ -43,6 +43,13 @@ public class Usuario {
 		this.senha = senha;
 	}
 	
+	//Metodo adicionar e remover.
+	public void adicionarEmpresa(Empresa novaEmpresa){
+		
+	}
+	public void removerEmpresa(Empresa exEmpresa){
+		
+	}
 
 	@Override
 	public String toString() {

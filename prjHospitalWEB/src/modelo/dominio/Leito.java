@@ -4,12 +4,16 @@ public class Leito {
 	
 	private String nomeLeito;
 	private String descricao;
+	private String localidade;
 	
 	private Empresa empresa;
+	private Internacao internacao;
 	
-	public Leito(String nomeLeito, Empresa empresa){
-		setNomeLeito(nomeLeito);
-		setEmpresa(empresa);
+	public Leito(String nomeLeito, String localidade, Empresa empresa, Internacao internacao){
+		this.setNomeLeito(nomeLeito);
+		this.setLocalidade(localidade);
+		this.setEmpresa(empresa);
+		this.setInternacao(internacao);
 		
 	}
 	
@@ -26,6 +30,14 @@ public class Leito {
 	public void setDescricao(String descricao) {
 		this.descricao = descricao;
 	}	
+	public String getLocalidade() {
+		return localidade;
+	}
+
+	public void setLocalidade(String localidade) {
+		this.localidade = localidade;
+	}
+
 	public Empresa getEmpresa() {
 		return empresa;
 	}
@@ -34,6 +46,14 @@ public class Leito {
 		this.empresa = empresa;
 	}
 	
+	public Internacao getInternacao() {
+		return internacao;
+	}
+
+	public void setInternacao(Internacao internacao) {
+		this.internacao = internacao;
+	}
+
 	// Metodo toString
 	@Override
 	public String toString() {

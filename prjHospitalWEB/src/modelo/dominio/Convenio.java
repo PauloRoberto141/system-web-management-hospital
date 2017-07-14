@@ -5,19 +5,24 @@ import java.util.TreeSet;
 
 public class Convenio extends PessoaJuridica {
 	
-	private Set<Empresa> listaEmpresas;
 	private Set<Plano> listaPlanos;
-	private Set<TabelaDePrecoItem> listaTabelaDePrecoItens;
 	
-	public Convenio(Set<Plano> listaPlanos){
+	public Convenio(String nomePessoa, String logradouro, Integer numero, String bairro, String cidade, String uf,
+			String pais, String cep, String cnpj, String razaoSocial, Set<Plano> listaPlanos){
 		
-		this.listaEmpresas = new TreeSet<Empresa>();
+		super(nomePessoa, logradouro, numero, bairro, cidade, uf, pais, cep, cnpj, razaoSocial);
 		this.listaPlanos = new TreeSet<Plano>();
-		this.listaTabelaDePrecoItens = new TreeSet<TabelaDePrecoItem>();
+		for(Plano p : listaPlanos)
+			this.adicionarPlano(p);
 	}
 	
-	public boolean adicionarEmpresa(Empresa novo){
-		return false;
+	//Metodo adicionar e remover.
+	public void adicionarPlano(Plano novoPlano){
+		
+	}	
+	public void removerPlano(Plano exPlano){
+		
 	}
+	
 
 }

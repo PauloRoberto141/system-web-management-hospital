@@ -10,30 +10,29 @@ public class Conta {
 	private Date dtFim;
 	private String matriculaConvenio;
 	private String validadeCarteira;
+	private String nomeTitular;
 	private String parentescoTitular;
 	private Date dtAutorizacao;
 	private Integer senhaAutorizacao;
 	
 	private TipoDeAtendimento tipoDeAtendimento;
 	private Internacao internacao;
-	private Atendimento atendimento;
-	
+	private Atendimento atendimento;	
 	private Set<Item> listaItens;
 		
-	public Conta(Date dtInicio, Date dtFim, String matriculaConvenio, String validadeCarteira, String parentescoTitular,
-			Date dtAutorizacao, Integer senhaAutorizacao, TipoDeAtendimento tipoDeAtendimento, Internacao internacao,
-			Atendimento atendimento) {
+	public Conta(Date dtInicio, Date dtFim, String matriculaConvenio, String validadeCarteira,  String nomeTitular, String parentescoTitular,
+			Date dtAutorizacao, Integer senhaAutorizacao, TipoDeAtendimento tipoDeAtendimento) {
 		
 		super();
 		this.setDtInicio(dtInicio);
 		this.setDtFim(dtFim);
 		this.setMatriculaConvenio(matriculaConvenio);
 		this.setValidadeCarteira(validadeCarteira);
+		this.setNomeTitular(nomeTitular);
 		this.setParentescoTitular(parentescoTitular);
 		this.setDtAutorizacao(dtAutorizacao);
 		this.setSenhaAutorizacao(senhaAutorizacao);
 		this.setTipoDeAtendimento(tipoDeAtendimento);
-		this.setInternacao(internacao);
 		this.listaItens = new TreeSet<Item>();
 	}
 
@@ -68,6 +67,14 @@ public class Conta {
 
 	public void setValidadeCarteira(String validadeCarteira) {
 		this.validadeCarteira = validadeCarteira;
+	}
+
+	public String getNomeTitular() {
+		return nomeTitular;
+	}
+
+	public void setNomeTitular(String nomeTitular) {
+		this.nomeTitular = nomeTitular;
 	}
 
 	public String getParentescoTitular() {
@@ -117,7 +124,15 @@ public class Conta {
 	public void setAtendimento(Atendimento atendimento) {
 		this.atendimento = atendimento;
 	}
-
+	
+	//Metodo adiconar e remover.
+	public void adicionarItem(Item novoItem){
+		
+	}
+	
+	public void removerItem(Item exItem){
+		
+	}
 	@Override
 	public String toString() {
 		return "Conta [dtInicio=" + dtInicio + ", dtFim=" + dtFim + ", matriculaConvenio=" + matriculaConvenio

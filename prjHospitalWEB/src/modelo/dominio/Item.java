@@ -10,14 +10,14 @@ public class Item {
 	private String unidadeConsumo;
 	private String referencialTuss;
 	
-	private Set<TabelaDePrecoItem> listaTabelaDePrecoItens;
+	private Set<Preco> listaPrecos;
 	
 	public Item(String nomeItem, String unidadePadrao, String unidadeConsumo, String referenciaTuss){
 		this.setNomeItem(nomeItem);
 		this.setUnidadePadrao(unidadePadrao);
 		this.setUnidadeConsumo(unidadeConsumo);
 		this.setReferencialTuss(referenciaTuss);
-		this.listaTabelaDePrecoItens = new TreeSet<TabelaDePrecoItem>();
+		this.listaPrecos = new TreeSet<Preco>();
 		
 	}
 
@@ -53,10 +53,18 @@ public class Item {
 		this.referencialTuss = referencialTuss;
 	}
 	
+	//Metodo adicionar e remover
+	public void adicionarPreco(Preco novoPreco){
+		
+	}
+	public void removerPreco(Preco exPreco){
+		
+	}
+	
 	@Override
 	public String toString() {
 		return "Item [nomeItem=" + nomeItem + ", unidadePadrao=" + unidadePadrao + ", unidadeConsumo=" + unidadeConsumo
-				+ ", referencialTuss=" + referencialTuss + ", listaTabelaDePrecoItens=" + listaTabelaDePrecoItens + "]";
+				+ ", referencialTuss=" + referencialTuss + ", listaTabelaDePrecoItens=" + listaPrecos + "]";
 	}
 	
 	

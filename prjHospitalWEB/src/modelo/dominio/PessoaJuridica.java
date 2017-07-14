@@ -1,6 +1,6 @@
 package modelo.dominio;
 
-public class PessoaJuridica {
+public class PessoaJuridica extends Pessoa{
 	
 	private String cnpj;
 	private String razaoSocial;
@@ -11,9 +11,11 @@ public class PessoaJuridica {
 		
 	}
 	
-	public PessoaJuridica(String cnpj, String razaoSocial){
-		setCnpj(cnpj);
-		setRazaoSocial(razaoSocial);		
+	public PessoaJuridica(String nomePessoa, String logradouro, Integer numero, String bairro, String cidade, String uf,
+			String pais, String cep, String cnpj, String razaoSocial){
+		super(nomePessoa, logradouro, numero, bairro, cidade, uf, pais, cep);
+		this.setCnpj(cnpj);
+		this.setRazaoSocial(razaoSocial);		
 	}
 	
 	// Metodos gets e sets

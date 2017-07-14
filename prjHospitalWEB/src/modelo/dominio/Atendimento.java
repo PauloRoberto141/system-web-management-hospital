@@ -14,12 +14,14 @@ public class Atendimento {
 	private TipoDeSaida tipoDeSaida;
 	private Set<Conta> listaContas;
 	
-	public Atendimento(Date dataAtendimento, Empresa empresa, Paciente paciente, Medico medico){
+	public Atendimento(Date dataAtendimento, Empresa empresa, Paciente paciente, Medico medico, Set<Conta> listaContas){
 		this.setDataAtendimento(dataAtendimento);
 		this.setEmpresa(empresa);
 		this.setPaciente(paciente);
 		this.setMedico(medico);
 		this.listaContas = new TreeSet<Conta>();
+		for(Conta c : listaContas)
+			this.adicionarConta(c);
 	}
 	
 	// Metodos gets e sets
@@ -62,7 +64,15 @@ public class Atendimento {
 	public void setTipoDeSaida(TipoDeSaida tipoDeSaida) {
 		this.tipoDeSaida = tipoDeSaida;
 	}
-
+	
+	// Metodo adicionar e remover.
+	public void adicionarConta(Conta novaConta){
+		
+	}
+	
+	public void removerConta(Conta ExConta){
+		
+	}
 	@Override
 	public String toString() {
 		return "Atendimento [dataAtendimento=" + dataAtendimento + ", empresa=" + empresa + ", paciente=" + paciente
